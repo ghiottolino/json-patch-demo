@@ -1,0 +1,5 @@
+[
+  { "op": "replace", "path": "/name", "value": "Jane" },
+  { "op": "add", "path": "/country", "value": "USA" },
+  { "op": "remove", "path": "/city" }
+]

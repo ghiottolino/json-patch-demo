@@ -1,0 +1,1552 @@
+{
+  "annotations": {},
+  "authorInformation": {
+    "authoredBy": "ntesser",
+    "authoredWhen": 1725431270.000000000,
+    "lastEditedBy": "ntesser",
+    "lastEditedWhen": 1725520252.000000000
+  },
+  "connections": [
+    {
+      "deletable": true,
+      "destID": 16,
+      "destPort": 1,
+      "sourceID": 14,
+      "sourcePort": 1
+    },
+    {
+      "deletable": true,
+      "destID": 18,
+      "destPort": 1,
+      "sourceID": 15,
+      "sourcePort": 1
+    },
+    {
+      "deletable": true,
+      "destID": 15,
+      "destPort": 1,
+      "sourceID": 16,
+      "sourcePort": 1
+    },
+    {
+      "deletable": true,
+      "destID": 21,
+      "destPort": 1,
+      "sourceID": 18,
+      "sourcePort": 1
+    },
+    {
+      "deletable": true,
+      "destID": 22,
+      "destPort": 1,
+      "sourceID": 21,
+      "sourcePort": 1
+    },
+    {
+      "deletable": true,
+      "destID": 24,
+      "destPort": 1,
+      "sourceID": 21,
+      "sourcePort": 1
+    },
+    {
+      "deletable": true,
+      "destID": 25,
+      "destPort": 1,
+      "sourceID": 22,
+      "sourcePort": 1
+    },
+    {
+      "deletable": true,
+      "destID": 23,
+      "destPort": 1,
+      "sourceID": 24,
+      "sourcePort": 1
+    },
+    {
+      "deletable": true,
+      "destID": 26,
+      "destPort": 1,
+      "sourceID": 25,
+      "sourcePort": 1
+    },
+    {
+      "deletable": true,
+      "destID": 17,
+      "destPort": 1,
+      "sourceID": 26,
+      "sourcePort": 1
+    }
+  ],
+  "credentialPlaceholders": [],
+  "flowVariables": [],
+  "nodes": {
+    "node_14": {
+      "annotation": {
+        "annotationDefault": true
+      },
+      "bundle": {
+        "name": "KNIME Google API Nodes",
+        "symbolicName": "org.knime.google.api",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407021505"
+      },
+      "factory": "org.knime.google.api.nodes.authenticator.GoogleAuthenticatorNodeFactory",
+      "factorySettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "factory_settings"
+      },
+      "feature": {
+        "name": "KNIME Google Connectors",
+        "symbolicName": "org.knime.features.google.api.feature.group",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407021505"
+      },
+      "filestore": {},
+      "id": 14,
+      "internalNodeSubSettings": {
+        "children": {
+          "memory_policy": {
+            "configType": "ConfigValueString",
+            "value": "CacheSmallInMemory"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "internal_node_subsettings"
+      },
+      "jobManager": {
+        "factory": ""
+      },
+      "locks": {
+        "hasConfigureLock": false,
+        "hasDeleteLock": true,
+        "hasResetLock": false
+      },
+      "modelSettings": {
+        "children": {
+          "authType": {
+            "configType": "ConfigValueString",
+            "value": "INTERACTIVE"
+          },
+          "apiKeySettings": {
+            "children": {
+              "apiKeyFormat": {
+                "configType": "ConfigValueString",
+                "value": "JSON"
+              },
+              "jsonFile": {
+                "children": {
+                  "path": {
+                    "children": {
+                      "location_present": {
+                        "configType": "ConfigValueBoolean",
+                        "value": true
+                      },
+                      "file_system_type": {
+                        "configType": "ConfigValueString",
+                        "value": "LOCAL"
+                      },
+                      "path": {
+                        "configType": "ConfigValueString",
+                        "value": ""
+                      }
+                    },
+                    "configType": "ConfigMap",
+                    "key": "path"
+                  }
+                },
+                "configType": "ConfigMap",
+                "key": "jsonFile"
+              },
+              "serviceAccountEmail": {
+                "configType": "ConfigValueString"
+              },
+              "p12File": {
+                "children": {
+                  "path": {
+                    "children": {
+                      "location_present": {
+                        "configType": "ConfigValueBoolean",
+                        "value": true
+                      },
+                      "file_system_type": {
+                        "configType": "ConfigValueString",
+                        "value": "LOCAL"
+                      },
+                      "path": {
+                        "configType": "ConfigValueString",
+                        "value": ""
+                      }
+                    },
+                    "configType": "ConfigMap",
+                    "key": "path"
+                  }
+                },
+                "configType": "ConfigMap",
+                "key": "p12File"
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "apiKeySettings"
+          },
+          "scopeSettings": {
+            "children": {
+              "scopesSelectionMode": {
+                "configType": "ConfigValueString",
+                "value": "STANDARD"
+              },
+              "standardScopes": {
+                "array": [
+                  "GoogleDriveRead"
+                ],
+                "configType": "ConfigValueStringArray"
+              },
+              "customScopes": {
+                "array": [],
+                "configType": "ConfigValueBooleanArray"
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "scopeSettings"
+          },
+          "loginCredentialRef_Internals": {
+            "configType": "ConfigValueString",
+            "value": "1e69bc3d-eb8a-46ee-aa39-f1383f3c1efa"
+          },
+          "useCustomClientId": {
+            "configType": "ConfigValueBoolean",
+            "value": false
+          },
+          "customClientIdFile": {
+            "children": {
+              "path": {
+                "children": {
+                  "location_present": {
+                    "configType": "ConfigValueBoolean",
+                    "value": true
+                  },
+                  "file_system_type": {
+                    "configType": "ConfigValueString",
+                    "value": "LOCAL"
+                  },
+                  "path": {
+                    "configType": "ConfigValueString",
+                    "value": ""
+                  }
+                },
+                "configType": "ConfigMap",
+                "key": "path"
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "customClientIdFile"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "model"
+      },
+      "nodeName": "Google Authenticator",
+      "nodeType": "nativenode",
+      "uiInfo": {
+        "bounds": {
+          "height": -1,
+          "location": {
+            "x": -585,
+            "y": -156
+          },
+          "width": -1
+        },
+        "hasAbsoluteCoordinates": false,
+        "symbolRelative": true
+      },
+      "variableSettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "variables"
+      }
+    },
+    "node_15": {
+      "annotation": {
+        "annotationDefault": true
+      },
+      "bundle": {
+        "name": "KNIME Google API Nodes",
+        "symbolicName": "org.knime.google.api",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407021505"
+      },
+      "factory": "org.knime.google.api.sheets.nodes.reader.GoogleSheetsReaderFactory",
+      "factorySettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "factory_settings"
+      },
+      "feature": {
+        "name": "KNIME Google Connectors",
+        "symbolicName": "org.knime.features.google.api.feature.group",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407021505"
+      },
+      "filestore": {},
+      "id": 15,
+      "internalNodeSubSettings": {
+        "children": {
+          "memory_policy": {
+            "configType": "ConfigValueString",
+            "value": "CacheSmallInMemory"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "internal_node_subsettings"
+      },
+      "jobManager": {
+        "factory": ""
+      },
+      "locks": {
+        "hasConfigureLock": false,
+        "hasDeleteLock": true,
+        "hasResetLock": false
+      },
+      "modelSettings": {
+        "children": {
+          "hasColumnHeader_Internals": {
+            "children": {
+              "SettingsModelID": {
+                "configType": "ConfigValueString",
+                "value": "SMID_boolean"
+              },
+              "EnabledStatus": {
+                "configType": "ConfigValueBoolean",
+                "value": true
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "hasColumnHeader_Internals"
+          },
+          "hasColumnHeader": {
+            "configType": "ConfigValueBoolean",
+            "value": true
+          },
+          "hasRowHeader_Internals": {
+            "children": {
+              "SettingsModelID": {
+                "configType": "ConfigValueString",
+                "value": "SMID_boolean"
+              },
+              "EnabledStatus": {
+                "configType": "ConfigValueBoolean",
+                "value": true
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "hasRowHeader_Internals"
+          },
+          "hasRowHeader": {
+            "configType": "ConfigValueBoolean",
+            "value": false
+          },
+          "spreadsheet_Internals": {
+            "children": {
+              "SettingsModelID": {
+                "configType": "ConfigValueString",
+                "value": "SMID_spreadsheetandsheetchoser"
+              },
+              "EnabledStatus": {
+                "configType": "ConfigValueBoolean",
+                "value": true
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "spreadsheet_Internals"
+          },
+          "spreadsheet": {
+            "children": {
+              "spreadsheetId": {
+                "configType": "ConfigValueString",
+                "value": "18Kk72NxRtUsGUj7Lor_GPONgzM62lEb5b6CUkPDO2k4"
+              },
+              "spreadsheetName": {
+                "configType": "ConfigValueString",
+                "value": "bollette via trevigiana"
+              },
+              "sheetName": {
+                "configType": "ConfigValueString",
+                "value": "bollette normalizzate"
+              },
+              "firstSheet": {
+                "configType": "ConfigValueBoolean",
+                "value": false
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "spreadsheet"
+          },
+          "readRange_Internals": {
+            "children": {
+              "SettingsModelID": {
+                "configType": "ConfigValueString",
+                "value": "SMN_string_disact"
+              },
+              "EnabledStatus": {
+                "configType": "ConfigValueBoolean",
+                "value": true
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "readRange_Internals"
+          },
+          "readRange": {
+            "configType": "ConfigValueString",
+            "value": ""
+          },
+          "readRange_BOOL": {
+            "configType": "ConfigValueBoolean",
+            "value": false
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "model"
+      },
+      "nodeName": "Google Sheets Reader",
+      "nodeType": "nativenode",
+      "uiInfo": {
+        "bounds": {
+          "height": -1,
+          "location": {
+            "x": -345,
+            "y": -156
+          },
+          "width": -1
+        },
+        "hasAbsoluteCoordinates": false,
+        "symbolRelative": true
+      },
+      "variableSettings": {
+        "children": {}
+      }
+    },
+    "node_16": {
+      "annotation": {
+        "annotationDefault": true
+      },
+      "bundle": {
+        "name": "KNIME Google API Nodes",
+        "symbolicName": "org.knime.google.api",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407021505"
+      },
+      "factory": "org.knime.google.api.sheets.nodes.connector.GoogleSheetsConnectorFactory",
+      "factorySettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "factory_settings"
+      },
+      "feature": {
+        "name": "KNIME Google Connectors",
+        "symbolicName": "org.knime.features.google.api.feature.group",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407021505"
+      },
+      "filestore": {},
+      "id": 16,
+      "internalNodeSubSettings": {
+        "children": {
+          "memory_policy": {
+            "configType": "ConfigValueString",
+            "value": "CacheSmallInMemory"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "internal_node_subsettings"
+      },
+      "jobManager": {
+        "factory": ""
+      },
+      "locks": {
+        "hasConfigureLock": false,
+        "hasDeleteLock": true,
+        "hasResetLock": false
+      },
+      "modelSettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "model"
+      },
+      "nodeName": "Google Sheets Connector",
+      "nodeType": "nativenode",
+      "uiInfo": {
+        "bounds": {
+          "height": -1,
+          "location": {
+            "x": -440,
+            "y": -156
+          },
+          "width": -1
+        },
+        "hasAbsoluteCoordinates": false,
+        "symbolRelative": true
+      },
+      "variableSettings": {
+        "children": {}
+      }
+    },
+    "node_17": {
+      "annotation": {
+        "annotationDefault": true
+      },
+      "bundle": {
+        "name": "KNIME Views",
+        "symbolicName": "org.knime.base.views",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407021419"
+      },
+      "factory": "org.knime.base.views.node.lineplot.LinePlotNodeFactory",
+      "factorySettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "factory_settings"
+      },
+      "feature": {
+        "name": "KNIME Views",
+        "symbolicName": "org.knime.features.base.views.feature.group",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407021419"
+      },
+      "filestore": {},
+      "id": 17,
+      "internalNodeSubSettings": {
+        "children": {
+          "memory_policy": {
+            "configType": "ConfigValueString",
+            "value": "CacheSmallInMemory"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "internal_node_subsettings"
+      },
+      "jobManager": {
+        "factory": ""
+      },
+      "locks": {
+        "hasConfigureLock": false,
+        "hasDeleteLock": true,
+        "hasResetLock": false
+      },
+      "modelSettings": {
+        "children": {
+          "generateImage": {
+            "configType": "ConfigValueBoolean",
+            "value": false
+          },
+          "width": {
+            "configType": "ConfigValueInt",
+            "value": 800
+          },
+          "height": {
+            "configType": "ConfigValueInt",
+            "value": 600
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "model"
+      },
+      "nodeCreationConfig": {
+        "children": {
+          "Input Table": {
+            "children": {},
+            "configType": "ConfigMap",
+            "key": "Input Table"
+          },
+          "Output Image": {
+            "children": {},
+            "configType": "ConfigMap",
+            "key": "Output Image"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "node_creation_config"
+      },
+      "nodeName": "Line Plot",
+      "nodeType": "nativenode",
+      "uiInfo": {
+        "bounds": {
+          "height": -1,
+          "location": {
+            "x": 320,
+            "y": -261
+          },
+          "width": -1
+        },
+        "hasAbsoluteCoordinates": false,
+        "symbolRelative": true
+      },
+      "variableSettings": {
+        "children": {}
+      }
+    },
+    "node_18": {
+      "annotation": {
+        "annotationDefault": true
+      },
+      "bundle": {
+        "name": "KNIME Base Nodes",
+        "symbolicName": "org.knime.base",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407050813"
+      },
+      "factory": "org.knime.base.node.preproc.colconvert.stringtonumber2.StringToNumber2NodeFactory",
+      "factorySettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "factory_settings"
+      },
+      "feature": {
+        "name": "KNIME Base nodes",
+        "symbolicName": "org.knime.features.base.feature.group",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407050813"
+      },
+      "filestore": {},
+      "id": 18,
+      "internalNodeSubSettings": {
+        "children": {
+          "memory_policy": {
+            "configType": "ConfigValueString",
+            "value": "CacheSmallInMemory"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "internal_node_subsettings"
+      },
+      "jobManager": {
+        "factory": ""
+      },
+      "locks": {
+        "hasConfigureLock": false,
+        "hasDeleteLock": true,
+        "hasResetLock": false
+      },
+      "modelSettings": {
+        "children": {
+          "decimal_separator_Internals": {
+            "children": {
+              "SettingsModelID": {
+                "configType": "ConfigValueString",
+                "value": "SMID_string"
+              },
+              "EnabledStatus": {
+                "configType": "ConfigValueBoolean",
+                "value": true
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "decimal_separator_Internals"
+          },
+          "decimal_separator": {
+            "configType": "ConfigValueString",
+            "value": "."
+          },
+          "thousands_separator_Internals": {
+            "children": {
+              "SettingsModelID": {
+                "configType": "ConfigValueString",
+                "value": "SMID_string"
+              },
+              "EnabledStatus": {
+                "configType": "ConfigValueBoolean",
+                "value": true
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "thousands_separator_Internals"
+          },
+          "thousands_separator": {
+            "configType": "ConfigValueString",
+            "value": ""
+          },
+          "parse_type": {
+            "children": {
+              "cell_class": {
+                "configType": "ConfigValueString",
+                "value": "org.knime.core.data.def.DoubleCell"
+              },
+              "is_null": {
+                "configType": "ConfigValueBoolean",
+                "value": false
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "parse_type"
+          },
+          "generic_parse_Internals": {
+            "children": {
+              "SettingsModelID": {
+                "configType": "ConfigValueString",
+                "value": "SMID_boolean"
+              },
+              "EnabledStatus": {
+                "configType": "ConfigValueBoolean",
+                "value": true
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "generic_parse_Internals"
+          },
+          "generic_parse": {
+            "configType": "ConfigValueBoolean",
+            "value": false
+          },
+          "fail_on_error_Internals": {
+            "children": {
+              "SettingsModelID": {
+                "configType": "ConfigValueString",
+                "value": "SMID_boolean"
+              },
+              "EnabledStatus": {
+                "configType": "ConfigValueBoolean",
+                "value": true
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "fail_on_error_Internals"
+          },
+          "fail_on_error": {
+            "configType": "ConfigValueBoolean",
+            "value": false
+          },
+          "include": {
+            "children": {
+              "filter-type": {
+                "configType": "ConfigValueString",
+                "value": "STANDARD"
+              },
+              "included_names": {
+                "array": [
+                  "persone-sopra",
+                  "persone-sotto",
+                  "gas (consumo)",
+                  "gas (costo)",
+                  "acqua (consumo)"
+                ],
+                "configType": "ConfigValueStringArray"
+              },
+              "excluded_names": {
+                "array": [
+                  "anno",
+                  "mese"
+                ],
+                "configType": "ConfigValueStringArray"
+              },
+              "enforce_option": {
+                "configType": "ConfigValueString",
+                "value": "EnforceExclusion"
+              },
+              "name_pattern": {
+                "children": {
+                  "pattern": {
+                    "configType": "ConfigValueString",
+                    "value": ""
+                  },
+                  "type": {
+                    "configType": "ConfigValueString",
+                    "value": "Wildcard"
+                  },
+                  "caseSensitive": {
+                    "configType": "ConfigValueBoolean",
+                    "value": true
+                  },
+                  "excludeMatching": {
+                    "configType": "ConfigValueBoolean",
+                    "value": false
+                  }
+                },
+                "configType": "ConfigMap",
+                "key": "name_pattern"
+              },
+              "datatype": {
+                "children": {
+                  "typelist": {
+                    "children": {},
+                    "configType": "ConfigMap",
+                    "key": "typelist"
+                  }
+                },
+                "configType": "ConfigMap",
+                "key": "datatype"
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "include"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "model"
+      },
+      "nodeName": "String to Number",
+      "nodeType": "nativenode",
+      "uiInfo": {
+        "bounds": {
+          "height": -1,
+          "location": {
+            "x": -245,
+            "y": -151
+          },
+          "width": -1
+        },
+        "hasAbsoluteCoordinates": false,
+        "symbolRelative": true
+      },
+      "variableSettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "variables"
+      }
+    },
+    "node_21": {
+      "annotation": {
+        "annotationDefault": true
+      },
+      "bundle": {
+        "name": "KNIME Base Nodes",
+        "symbolicName": "org.knime.base",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407050813"
+      },
+      "factory": "org.knime.base.node.preproc.colcombine2.ColCombine2NodeFactory",
+      "factorySettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "factory_settings"
+      },
+      "feature": {
+        "name": "KNIME Base nodes",
+        "symbolicName": "org.knime.features.base.feature.group",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407050813"
+      },
+      "filestore": {},
+      "id": 21,
+      "internalNodeSubSettings": {
+        "children": {
+          "memory_policy": {
+            "configType": "ConfigValueString",
+            "value": "CacheSmallInMemory"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "internal_node_subsettings"
+      },
+      "jobManager": {
+        "factory": ""
+      },
+      "locks": {
+        "hasConfigureLock": false,
+        "hasDeleteLock": true,
+        "hasResetLock": false
+      },
+      "modelSettings": {
+        "children": {
+          "column-filter": {
+            "children": {
+              "filter-type": {
+                "configType": "ConfigValueString",
+                "value": "STANDARD"
+              },
+              "included_names": {
+                "array": [
+                  "anno",
+                  "mese"
+                ],
+                "configType": "ConfigValueStringArray"
+              },
+              "excluded_names": {
+                "array": [
+                  "persone-sopra",
+                  "persone-sotto",
+                  "gas (consumo)",
+                  "gas (costo)",
+                  "acqua (consumo)"
+                ],
+                "configType": "ConfigValueStringArray"
+              },
+              "enforce_option": {
+                "configType": "ConfigValueString",
+                "value": "EnforceInclusion"
+              },
+              "name_pattern": {
+                "children": {
+                  "pattern": {
+                    "configType": "ConfigValueString",
+                    "value": ""
+                  },
+                  "type": {
+                    "configType": "ConfigValueString",
+                    "value": "Wildcard"
+                  },
+                  "caseSensitive": {
+                    "configType": "ConfigValueBoolean",
+                    "value": false
+                  },
+                  "excludeMatching": {
+                    "configType": "ConfigValueBoolean",
+                    "value": false
+                  }
+                },
+                "configType": "ConfigMap",
+                "key": "name_pattern"
+              },
+              "datatype": {
+                "children": {
+                  "typelist": {
+                    "children": {},
+                    "configType": "ConfigMap",
+                    "key": "typelist"
+                  }
+                },
+                "configType": "ConfigMap",
+                "key": "datatype"
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "column-filter"
+          },
+          "failIfMissingColumns": {
+            "configType": "ConfigValueBoolean",
+            "value": false
+          },
+          "delimiter": {
+            "configType": "ConfigValueString",
+            "value": "_"
+          },
+          "delimiterInputs": {
+            "configType": "ConfigValueString",
+            "value": "QUOTE"
+          },
+          "quote_char": {
+            "configType": "ConfigValueChar",
+            "value": 34
+          },
+          "is_quoting_always": {
+            "configType": "ConfigValueBoolean",
+            "value": false
+          },
+          "replace_delimiter": {
+            "configType": "ConfigValueString",
+            "value": ""
+          },
+          "new_column_name": {
+            "configType": "ConfigValueString",
+            "value": "periodo"
+          },
+          "remove_included_columns": {
+            "configType": "ConfigValueBoolean",
+            "value": false
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "model"
+      },
+      "nodeName": "Column Combiner",
+      "nodeType": "nativenode",
+      "uiInfo": {
+        "bounds": {
+          "height": -1,
+          "location": {
+            "x": -85,
+            "y": -156
+          },
+          "width": -1
+        },
+        "hasAbsoluteCoordinates": false,
+        "symbolRelative": true
+      },
+      "variableSettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "variables"
+      }
+    },
+    "node_22": {
+      "annotation": {
+        "annotationDefault": true
+      },
+      "bundle": {
+        "name": "KNIME Base Nodes",
+        "symbolicName": "org.knime.base",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407050813"
+      },
+      "factory": "org.knime.base.node.preproc.filter.row3.RowFilterNodeFactory",
+      "factorySettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "factory_settings"
+      },
+      "feature": {
+        "name": "KNIME Base nodes",
+        "symbolicName": "org.knime.features.base.feature.group",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407050813"
+      },
+      "filestore": {},
+      "id": 22,
+      "internalNodeSubSettings": {
+        "children": {
+          "memory_policy": {
+            "configType": "ConfigValueString",
+            "value": "CacheSmallInMemory"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "internal_node_subsettings"
+      },
+      "jobManager": {
+        "factory": ""
+      },
+      "locks": {
+        "hasConfigureLock": false,
+        "hasDeleteLock": true,
+        "hasResetLock": false
+      },
+      "modelSettings": {
+        "children": {
+          "outputMode": {
+            "configType": "ConfigValueString",
+            "value": "MATCHING"
+          },
+          "matchCriteria": {
+            "configType": "ConfigValueString",
+            "value": "AND"
+          },
+          "predicates": {
+            "children": {
+              "0": {
+                "children": {
+                  "column": {
+                    "children": {
+                      "selected": {
+                        "configType": "ConfigValueString",
+                        "value": "gas (consumo)"
+                      },
+                      "compatibleTypes_Internals": {
+                        "array": [
+                          "org.knime.core.data.DoubleValue",
+                          "org.knime.core.data.DataValue",
+                          "org.knime.core.data.ComplexNumberValue",
+                          "org.knime.core.data.FuzzyNumberValue",
+                          "org.knime.core.data.FuzzyIntervalValue",
+                          "org.knime.core.data.BoundedValue"
+                        ],
+                        "configType": "ConfigValueStringArray"
+                      }
+                    },
+                    "configType": "ConfigMap",
+                    "key": "column"
+                  },
+                  "operator": {
+                    "configType": "ConfigValueString",
+                    "value": "GTE"
+                  },
+                  "predicateValues": {
+                    "children": {
+                      "values": {
+                        "children": {
+                          "0": {
+                            "children": {
+                              "typeIdentifier": {
+                                "children": {
+                                  "cell_class": {
+                                    "configType": "ConfigValueString",
+                                    "value": "org.knime.core.data.def.DoubleCell"
+                                  },
+                                  "is_null": {
+                                    "configType": "ConfigValueBoolean",
+                                    "value": false
+                                  }
+                                },
+                                "configType": "ConfigMap",
+                                "key": "typeIdentifier"
+                              },
+                              "value": {
+                                "configType": "ConfigValueDouble",
+                                "value": 0.0
+                              }
+                            },
+                            "configType": "ConfigMap",
+                            "key": "0"
+                          }
+                        },
+                        "configType": "ConfigMap",
+                        "key": "values"
+                      },
+                      "inputKind": {
+                        "configType": "ConfigValueString",
+                        "value": "SINGLE"
+                      }
+                    },
+                    "configType": "ConfigMap",
+                    "key": "predicateValues"
+                  }
+                },
+                "configType": "ConfigMap",
+                "key": "0"
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "predicates"
+          },
+          "domains": {
+            "configType": "ConfigValueString",
+            "value": "RETAIN"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "model"
+      },
+      "nodeName": "Row Filter",
+      "nodeType": "nativenode",
+      "uiInfo": {
+        "bounds": {
+          "height": -1,
+          "location": {
+            "x": 85,
+            "y": -186
+          },
+          "width": -1
+        },
+        "hasAbsoluteCoordinates": false,
+        "symbolRelative": true
+      },
+      "variableSettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "variables"
+      }
+    },
+    "node_23": {
+      "annotation": {
+        "annotationDefault": true
+      },
+      "bundle": {
+        "name": "KNIME Views",
+        "symbolicName": "org.knime.base.views",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407021419"
+      },
+      "factory": "org.knime.base.views.node.lineplot.LinePlotNodeFactory",
+      "factorySettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "factory_settings"
+      },
+      "feature": {
+        "name": "KNIME Views",
+        "symbolicName": "org.knime.features.base.views.feature.group",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407021419"
+      },
+      "filestore": {},
+      "id": 23,
+      "internalNodeSubSettings": {
+        "children": {
+          "memory_policy": {
+            "configType": "ConfigValueString",
+            "value": "CacheSmallInMemory"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "internal_node_subsettings"
+      },
+      "jobManager": {
+        "factory": ""
+      },
+      "locks": {
+        "hasConfigureLock": false,
+        "hasDeleteLock": true,
+        "hasResetLock": false
+      },
+      "modelSettings": {
+        "children": {
+          "generateImage": {
+            "configType": "ConfigValueBoolean",
+            "value": false
+          },
+          "width": {
+            "configType": "ConfigValueInt",
+            "value": 800
+          },
+          "height": {
+            "configType": "ConfigValueInt",
+            "value": 600
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "model"
+      },
+      "nodeCreationConfig": {
+        "children": {
+          "Input Table": {
+            "children": {},
+            "configType": "ConfigMap",
+            "key": "Input Table"
+          },
+          "Output Image": {
+            "children": {},
+            "configType": "ConfigMap",
+            "key": "Output Image"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "node_creation_config"
+      },
+      "nodeName": "Line Plot",
+      "nodeType": "nativenode",
+      "uiInfo": {
+        "bounds": {
+          "height": -1,
+          "location": {
+            "x": 225,
+            "y": -96
+          },
+          "width": -1
+        },
+        "hasAbsoluteCoordinates": false,
+        "symbolRelative": true
+      },
+      "variableSettings": {
+        "children": {}
+      }
+    },
+    "node_24": {
+      "annotation": {
+        "annotationDefault": true
+      },
+      "bundle": {
+        "name": "KNIME Base Nodes",
+        "symbolicName": "org.knime.base",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407050813"
+      },
+      "factory": "org.knime.base.node.preproc.filter.row3.RowFilterNodeFactory",
+      "factorySettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "factory_settings"
+      },
+      "feature": {
+        "name": "KNIME Base nodes",
+        "symbolicName": "org.knime.features.base.feature.group",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202407050813"
+      },
+      "filestore": {},
+      "id": 24,
+      "internalNodeSubSettings": {
+        "children": {
+          "memory_policy": {
+            "configType": "ConfigValueString",
+            "value": "CacheSmallInMemory"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "internal_node_subsettings"
+      },
+      "jobManager": {
+        "factory": ""
+      },
+      "locks": {
+        "hasConfigureLock": false,
+        "hasDeleteLock": true,
+        "hasResetLock": false
+      },
+      "modelSettings": {
+        "children": {
+          "outputMode": {
+            "configType": "ConfigValueString",
+            "value": "MATCHING"
+          },
+          "matchCriteria": {
+            "configType": "ConfigValueString",
+            "value": "AND"
+          },
+          "predicates": {
+            "children": {
+              "0": {
+                "children": {
+                  "column": {
+                    "children": {
+                      "selected": {
+                        "configType": "ConfigValueString",
+                        "value": "acqua (consumo)"
+                      },
+                      "compatibleTypes_Internals": {
+                        "array": [
+                          "org.knime.core.data.DoubleValue",
+                          "org.knime.core.data.DataValue",
+                          "org.knime.core.data.ComplexNumberValue",
+                          "org.knime.core.data.FuzzyNumberValue",
+                          "org.knime.core.data.FuzzyIntervalValue",
+                          "org.knime.core.data.BoundedValue"
+                        ],
+                        "configType": "ConfigValueStringArray"
+                      }
+                    },
+                    "configType": "ConfigMap",
+                    "key": "column"
+                  },
+                  "operator": {
+                    "configType": "ConfigValueString",
+                    "value": "GTE"
+                  },
+                  "predicateValues": {
+                    "children": {
+                      "values": {
+                        "children": {
+                          "0": {
+                            "children": {
+                              "typeIdentifier": {
+                                "children": {
+                                  "cell_class": {
+                                    "configType": "ConfigValueString",
+                                    "value": "org.knime.core.data.def.DoubleCell"
+                                  },
+                                  "is_null": {
+                                    "configType": "ConfigValueBoolean",
+                                    "value": false
+                                  }
+                                },
+                                "configType": "ConfigMap",
+                                "key": "typeIdentifier"
+                              },
+                              "value": {
+                                "configType": "ConfigValueDouble",
+                                "value": 0.0
+                              }
+                            },
+                            "configType": "ConfigMap",
+                            "key": "0"
+                          }
+                        },
+                        "configType": "ConfigMap",
+                        "key": "values"
+                      },
+                      "inputKind": {
+                        "configType": "ConfigValueString",
+                        "value": "SINGLE"
+                      }
+                    },
+                    "configType": "ConfigMap",
+                    "key": "predicateValues"
+                  }
+                },
+                "configType": "ConfigMap",
+                "key": "0"
+              }
+            },
+            "configType": "ConfigMap",
+            "key": "predicates"
+          },
+          "domains": {
+            "configType": "ConfigValueString",
+            "value": "RETAIN"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "model"
+      },
+      "nodeName": "Row Filter",
+      "nodeType": "nativenode",
+      "uiInfo": {
+        "bounds": {
+          "height": -1,
+          "location": {
+            "x": 30,
+            "y": -56
+          },
+          "width": -1
+        },
+        "hasAbsoluteCoordinates": false,
+        "symbolRelative": true
+      },
+      "variableSettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "variables"
+      }
+    },
+    "node_25": {
+      "annotation": {
+        "annotationDefault": true
+      },
+      "bundle": {
+        "name": "KNIME Math Expression Node",
+        "symbolicName": "org.knime.ext.jep",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202404241821"
+      },
+      "factory": "org.knime.ext.jep.JEPNodeFactory",
+      "factorySettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "factory_settings"
+      },
+      "feature": {
+        "name": "KNIME Math Expression (JEP)",
+        "symbolicName": "org.knime.features.ext.jep.feature.group",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202404241821"
+      },
+      "filestore": {},
+      "id": 25,
+      "internalNodeSubSettings": {
+        "children": {
+          "memory_policy": {
+            "configType": "ConfigValueString",
+            "value": "CacheSmallInMemory"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "internal_node_subsettings"
+      },
+      "jobManager": {
+        "factory": ""
+      },
+      "locks": {
+        "hasConfigureLock": false,
+        "hasDeleteLock": true,
+        "hasResetLock": false
+      },
+      "modelSettings": {
+        "children": {
+          "append_column": {
+            "configType": "ConfigValueBoolean",
+            "value": true
+          },
+          "replaced_column": {
+            "configType": "ConfigValueString",
+            "value": "persone-sopra"
+          },
+          "expression": {
+            "configType": "ConfigValueString",
+            "value": "$persone-sopra$*1000"
+          },
+          "convert_to_int": {
+            "configType": "ConfigValueBoolean",
+            "value": false
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "model"
+      },
+      "nodeName": "Math Formula",
+      "nodeType": "nativenode",
+      "uiInfo": {
+        "bounds": {
+          "height": -1,
+          "location": {
+            "x": 147,
+            "y": -201
+          },
+          "width": -1
+        },
+        "hasAbsoluteCoordinates": false,
+        "symbolRelative": true
+      },
+      "variableSettings": {
+        "children": {}
+      }
+    },
+    "node_26": {
+      "annotation": {
+        "annotationDefault": true
+      },
+      "bundle": {
+        "name": "KNIME Math Expression Node",
+        "symbolicName": "org.knime.ext.jep",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202404241821"
+      },
+      "factory": "org.knime.ext.jep.JEPNodeFactory",
+      "factorySettings": {
+        "children": {},
+        "configType": "ConfigMap",
+        "key": "factory_settings"
+      },
+      "feature": {
+        "name": "KNIME Math Expression (JEP)",
+        "symbolicName": "org.knime.features.ext.jep.feature.group",
+        "vendor": "KNIME AG, Zurich, Switzerland",
+        "version": "5.3.0.v202404241821"
+      },
+      "filestore": {},
+      "id": 26,
+      "internalNodeSubSettings": {
+        "children": {
+          "memory_policy": {
+            "configType": "ConfigValueString",
+            "value": "CacheSmallInMemory"
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "internal_node_subsettings"
+      },
+      "jobManager": {
+        "factory": ""
+      },
+      "locks": {
+        "hasConfigureLock": false,
+        "hasDeleteLock": true,
+        "hasResetLock": false
+      },
+      "modelSettings": {
+        "children": {
+          "append_column": {
+            "configType": "ConfigValueBoolean",
+            "value": true
+          },
+          "replaced_column": {
+            "configType": "ConfigValueString",
+            "value": "persone-sotto"
+          },
+          "expression": {
+            "configType": "ConfigValueString",
+            "value": "$persone-sotto$*1000"
+          },
+          "convert_to_int": {
+            "configType": "ConfigValueBoolean",
+            "value": false
+          }
+        },
+        "configType": "ConfigMap",
+        "key": "model"
+      },
+      "nodeName": "Math Formula",
+      "nodeType": "nativenode",
+      "uiInfo": {
+        "bounds": {
+          "height": -1,
+          "location": {
+            "x": 225,
+            "y": -216
+          },
+          "width": -1
+        },
+        "hasAbsoluteCoordinates": false,
+        "symbolRelative": true
+      },
+      "variableSettings": {
+        "children": {}
+      }
+    }
+  },
+  "workflowEditorSettings": {
+    "connectionLineWidth": 1,
+    "curvedConnections": false,
+    "gridX": -1,
+    "gridY": -1,
+    "showGrid": false,
+    "snapToGrid": false,
+    "zoomLevel": 1.0
+  }
+}
