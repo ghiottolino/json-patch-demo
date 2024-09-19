@@ -23,12 +23,11 @@ public class CouchBaseLiteExample {
             ObjectMapper objectMapper = new ObjectMapper();
             File file = new File("workflow1.json");// Original JSON
             JsonNode jsonNode = objectMapper.readTree(file);
-            Map<String, Object> jsonDocument = jsonNodeToMap(jsonNode);
 
 
             // Create a new document
-            MutableDocument document = new MutableDocument("user:124", jsonDocument);
-
+            MutableDocument document = new MutableDocument("user:125");
+            document.setData(objectMapper.convertValue(jsonNode, Map.class)); // Convert JsonNode to Map for Couchbase storage
             // Save the document to the database
             database.save(document);
 
